@@ -87,8 +87,8 @@ jobs:
           build/th08.pdb
 
   compare:
+    needs: ['build']
     runs-on: windows-latest
-
     steps:
     - uses: actions/checkout@v3
     - name: Fetch game binary from cache.
