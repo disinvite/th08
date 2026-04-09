@@ -129,10 +129,12 @@ jobs:
       run: python ../scripts/generate_reccmp_diff.py > $env:GITHUB_STEP_SUMMARY
 
     - name: Reccmp save
+      working-directory: build
       run: |
         reccmp-reccmp --target th08 --json th08.json --silent
 
     - name: Reccmp diff
+      working-directory: build
       run: |
         # Download the current master state
         curl -fLSs -o saved-th08.json $RELEASE_URL/th08.json || echo "" >saved-th08.json
@@ -142,7 +144,7 @@ jobs:
       with:
         name: Accuracy Report
         path: |
-          th08.json
+          build/th08.json
 
 
   upload:
