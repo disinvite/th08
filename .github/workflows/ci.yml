@@ -134,6 +134,8 @@ jobs:
         reccmp-reccmp --target th08 --json th08.json --silent
 
     - name: Reccmp diff
+      env:
+        RELEASE_URL: https://github.com/GensokyoClub/th08/releases/download/continuous
       working-directory: build
       run: |
         # Download the current master state
