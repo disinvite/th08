@@ -109,7 +109,7 @@ jobs:
       working-directory: build
       run: |
         # Download the current master state
-        curl -fLSs -o saved-th08.json $RELEASE_URL/th08.json
+        curl -fLSs -o saved-th08.json $env:RELEASE_URL/th08.json
         reccmp-reccmp --target th08 --diff saved-th08.json
     - uses: actions/upload-artifact@v4
       with:
