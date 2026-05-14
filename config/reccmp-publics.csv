@@ -1,0 +1,4 @@
+// PDB mangled names
+address,type,symbol
+0x404720,function,??0Float3@th08@@QAE@MMM@Z
+0x40b460,function,??0Float3@th08@@QAE@XZ
