@@ -9,6 +9,7 @@ targets:
       - config/reccmp-globals.csv
       - config/reccmp-floats.csv
       - config/reccmp-strings.csv
+      - config/reccmp-publics.csv
     ghidra:
       ignore_types: []
       ignore_functions: []
